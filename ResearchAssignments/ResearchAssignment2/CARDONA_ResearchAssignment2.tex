@@ -29,17 +29,17 @@ Some of the open questions that exist within this topic include how the dark mat
 \subsection{This Proposal}
 This project will explore how M33's stellar streams will evolve during the MW-M31 merger in terms of their kinematic profiles.
 \subsection{Methods}
-The proposed scientific question will be approached through making rotation curve, velocity dispersion, and velocity gradient plots from the simulation data provided. From Homework 6, we know the timestamps at which the MW-M31 merger occurs (merger begins at ~6.5 Gyr). Therefore, I can use code from Homework 5 to plot the rotation curve of M33 before, during, and after the merger to see how the velocity changes with respect to radius for unbound material beyond its Jacobi radius (Eq. 1).\\
+The proposed scientific question will be approached through making rotation curve, velocity dispersion, and velocity gradient plots from the simulation data provided. From Homework 6, we know the timestamps at which the MW-M31 merger occurs (merger begins at ~6.5 Gyr). The timestamps for before the merger, during, and after can be found from the separation plots made for Homework 6; I would also make plots for the stream dynamics of M33 when it is near the merger versus further away from the merger. Therefore, I can use code from Homework 5 to plot the rotation curve of M33 before, during, and after the merger to see how the velocity changes with respect to radius for unbound material beyond its Jacobi radius (Eq. 1).
 \begin{equation} \label{eq:1}
     R_j = r  \bigg( \frac{M_{sat}}{2 M_{host}(<r)} \bigg)^{1/3}
-\end{equation}\\
-The MassProfile class would be used to plot the rotation curves with the circular velocities calculated from the Hernquist profile (Eq. 2).\\
+\end{equation}
+The MassProfile class would be used to plot the rotation curves with the circular velocities calculated from the Hernquist profile (Eq. 2).
 \begin{equation} \label{eq:2}
     v_{Hern} = (\frac{GM_{Hern}}{R})^{1/2}
-\end{equation}\\
+\end{equation}
 Velocity gradients can be plotted as the Hernquist circular velocities over time throughout the merger. 
 Velocity dispersion can also be plotted using code from Homework 6, resulting in plots showing relative velocities over time similar to those shown in Fig. 2.
-All of these plots will be made for selected disk particles at or beyond the Jacobi radius because these will be the particles that make up the tidal debris in question, with respect to the changing center of mass of M33. 
+All of these plots will be made for selected disk particles at or beyond the Jacobi radius because these will be the particles that make up the tidal debris in question, with respect to the changing center of mass of M33. Since this project will follow stellar streams, I will use the high resolution data files to provide a more detailed view of the particles in these structures.
 \begin{figure}[h]
 \centering
     \includegraphics[width=0.9\linewidth]{Amorisco2017fig.png}
