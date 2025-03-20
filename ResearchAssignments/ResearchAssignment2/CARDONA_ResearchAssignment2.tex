@@ -1,0 +1,59 @@
+\documentclass[linenumbers,trackchanges]{aastex7}
+
+\newcommand{\vdag}{(v)^\dagger}
+\newcommand\aastex{AAS\TeX}
+\newcommand\latex{La\TeX}
+
+\begin{document}
+
+\title{M33's Stream Dynamics}
+\author[orcid=0000-0000-0000-0001,sname='Alondra']{Alondra Cardona}
+\affiliation{The University of Arizona, Department of Astronomy and Steward Observatory}
+\email{alondrac@arizona.edu}
+
+\section{Introduction} 
+The proposed topic for this research project is tidal debris from M33 during and after the MW-M31 merger. More specifically, this project will delve into the dynamics of M33's stellar streams. This topic pertains to galaxy evolution through revealing how a satellite galaxy's evolutionary history is impacted by dynamical interactions with the other galaxies in the system.\\
+This topic is very important in understanding galaxy evolution because it helps contextualize how tidal disruptions in the form of stellar streams are created and evolved by kinematic interactions between galaxies. Studying the kinematic profiles of M33's stellar streams helps us understand how a merger can impact the evolutionary history of a satellite galaxy\citep{Johnston_1999}.\\
+The leading theory on galaxy formation is described by the cold dark matter (CDM) cosmological model, which suggests that galaxies form through hierarchical merger events and accretion. The CDM model suggests that galaxies lie within dark matter halos that form through the accretion and disruption of low-mass subhalos. Therefore, it is very important to understand the dynamical mechanisms that govern the formation and evolution of tidal debris in the form of stellar streams. These are the products of the subhalo disruption processes believed to be responsible for galaxy formation\citep{Shipp_2023}. Fig. 1 shows the streams of a low-mass satellite simulated with gravitational acceleration (right panel) and without gravitational acceleration (left panel), which shows how certain dynamical mechanisms can impact stellar stream density and kinematic profiles.
+\begin{figure}[h]
+\centering
+    \includegraphics[width=0.5\linewidth]{Choi2007fig.png}
+    \label{fig:enter-label}
+    \caption{Streams of a low-mass satellite simulated with gravitational acceleration (right panel) and without gravitational acceleration (left panel)\citep{10.1111/j.1365-2966.2007.12313.x}.}
+\end{figure}
+\newline
+Some of the open questions that exist within this topic include how the dark matter halo structure of the merger system relates to the satellite's stellar stream morphology. The role these stellar streams play in accretion events is also uncertain\citep{10.1093/mnras/sty2474}.\\
+
+
+\section{Proposal}
+\subsection{This Proposal}
+This project will explore how M33's stellar streams will evolve during the MW-M31 merger in terms of their kinematic profiles.
+\subsection{Methods}
+The proposed scientific question will be approached through making rotation curve, velocity dispersion, and velocity gradient plots from the simulation data provided. From Homework 6, we know the timestamps at which the MW-M31 merger occurs (merger begins at ~6.5 Gyr). Therefore, I can use code from Homework 5 to plot the rotation curve of M33 before, during, and after the merger to see how the velocity changes with respect to radius for unbound material beyond its Jacobi radius (Eq. 1).\\
+\begin{equation} \label{eq:1}
+    R_j = r  \bigg( \frac{M_{sat}}{2 M_{host}(<r)} \bigg)^{1/3}
+\end{equation}\\
+The MassProfile class would be used to plot the rotation curves with the circular velocities calculated from the Hernquist profile (Eq. 2).\\
+\begin{equation} \label{eq:2}
+    v_{Hern} = (\frac{GM_{Hern}}{R})^{1/2}
+\end{equation}\\
+Velocity gradients can be plotted as the Hernquist circular velocities over time throughout the merger. 
+Velocity dispersion can also be plotted using code from Homework 6, resulting in plots showing relative velocities over time similar to those shown in Fig. 2.
+All of these plots will be made for selected disk particles at or beyond the Jacobi radius because these will be the particles that make up the tidal debris in question, with respect to the changing center of mass of M33. 
+\begin{figure}[h]
+\centering
+    \includegraphics[width=0.9\linewidth]{Amorisco2017fig.png}
+    \label{fig:enter-label}
+    \caption{Kinematical profiles with rows displaying radial velocity dispersion $\sigma_r$, tangential velocity dispersion $\sigma_t$, and ordered rotational velocity $v_{\phi}$\citep{10.1093/mnras/stw2229}.}
+\end{figure}
+\subsection{Hypothesis}
+I expect to see the circular velocity of stellar stream particles to increase with time as M33 is gravitationally pulled towards the MW-M31 merger. Rotation curves will likely show particles further away from M33's center of mass will be moving slower than those closer to it as expected of any galaxy. However, the velocity values are expected to change during close encounters with the MW-M31 merger as particle and momentum distributions are rearranged throughout the system.
+\newline
+
+
+\bibliography{references}{}
+\bibliographystyle{aasjournalv7}
+
+
+\end{document}
+
